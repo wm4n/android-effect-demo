@@ -1,9 +1,8 @@
 package com.wm4n.effectdemo
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.snackbar.Snackbar
 import com.wm4n.effectdemo.databinding.ActivityMainBinding
 import com.wm4n.effectdemo.dialog.BottomDialogFragment
 
@@ -14,9 +13,16 @@ class MainActivity : AppCompatActivity() {
     val view = binding.root
     setContentView(view)
 
-    binding.buttonBottomDialogFragment.setOnClickListener { v ->
+    binding.buttonBottomDialogFragment.setOnClickListener {
       val f = BottomDialogFragment()
       f.show(supportFragmentManager, "BottomDialogFragment")
+    }
+
+    binding.buttonUpdatableTabs.setOnClickListener {
+      val intent = Intent(this, ContainerActivity::class.java).apply {
+        putExtra("fragment", "UpdatableTab")
+      }
+      startActivity(intent)
     }
   }
 }
