@@ -47,13 +47,7 @@ class UpdatableTabAdapter(fm: FragmentManager): FragmentPagerAdapter(
   BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 ) {
 
-  private val tabs: ArrayList<Int> = ArrayList()
-
-  init {
-    tabs.add(1)
-    tabs.add(2)
-    tabs.add(3)
-  }
+  private val tabs: MutableList<Int> = mutableListOf(1, 2, 3)
 
   override fun getCount(): Int {
     return tabs.size
@@ -84,6 +78,6 @@ class UpdatableTabAdapter(fm: FragmentManager): FragmentPagerAdapter(
   }
 
   override fun getItemPosition(`object`: Any): Int {
-    return PagerAdapter.POSITION_NONE;
+    return PagerAdapter.POSITION_NONE
   }
 }
