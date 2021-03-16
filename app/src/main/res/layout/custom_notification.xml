@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@android:color/transparent">
+
+  <ImageView
+    android:id="@+id/avatar"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true" />
+
+  <TextView
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:ellipsize="end"
+    android:fontFamily="sans-serif"
+    android:maxLines="2"
+    android:text=""
+    android:textColor="@color/custom_notification_text"
+    android:textSize="14sp"
+    android:gravity="center_vertical"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_toStartOf="@id/avatar"
+    android:layout_above="@+id/buttons"/>
+
+  <LinearLayout
+    android:id="@+id/buttons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal"
+    android:layout_below="@id/avatar"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true">
+
+    <TextView
+      android:id="@+id/button_decline"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="8dp"
+      android:layout_weight="1"
+      android:background="@drawable/bg_decline"
+      android:fontFamily="sans-serif"
+      android:gravity="center"
+      android:text="Decline"
+      android:textColor="@color/white"
+      android:textSize="14sp" />
+
+    <TextView
+      android:id="@+id/button_accept"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:layout_marginStart="8dp"
+      android:layout_weight="1"
+      android:background="@drawable/bg_accept"
+      android:fontFamily="sans-serif"
+      android:gravity="center"
+      android:text="Answer"
+      android:textColor="@color/white"
+      android:textSize="14sp" />
+
+  </LinearLayout>
+
+</RelativeLayout>

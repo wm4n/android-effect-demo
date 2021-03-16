@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
 import com.wm4n.effectdemo.R
 import com.wm4n.effectdemo.databinding.BottomDialogFragmentBinding
 
-class BottomDialogFragment : DialogFragment() {
+class BottomDialogFragment(private val url: String) : DialogFragment() {
 
   private var _binding : BottomDialogFragmentBinding? = null
-  private val binding get() = _binding!!
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -34,7 +32,7 @@ class BottomDialogFragment : DialogFragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    _binding?.webView?.loadUrl("https://wm4n.github.io")
+    _binding?.webView?.loadUrl(url)
   }
 
   override fun onDestroyView() {

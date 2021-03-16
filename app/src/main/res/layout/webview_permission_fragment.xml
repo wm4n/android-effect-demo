@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data/>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/view_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fitsSystemWindows="true">
+
+    <androidx.cardview.widget.CardView
+      android:id="@+id/card_view"
+      android:layout_width="0dp"
+      android:layout_height="350dp"
+      android:elevation="8dp"
+      app:cardCornerRadius="12dp"
+      app:cardBackgroundColor="?colorPrimary"
+      app:cardElevation="8dp"
+      app:contentPaddingTop="1dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <WebView
+      android:id="@+id/web_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
