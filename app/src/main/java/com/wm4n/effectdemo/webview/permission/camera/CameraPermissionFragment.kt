@@ -96,7 +96,7 @@ class CameraPermissionFragment(private val url: String) : DialogFragment() {
         imagePathCallback?.onReceiveValue(null)
       }
     }
-    else if(requestCode == REQUEST_IMAGE_PICK && resultCode == RESULT_OK) {
+    else if(requestCode == REQUEST_IMAGE_PICK) {
       if(resultCode == RESULT_OK) {
         val dataUri = data?.data ?: return
         val ctx = activity ?: return
